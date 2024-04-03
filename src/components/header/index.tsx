@@ -63,7 +63,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const Header: React.FC<HeaderProps> = ({ handleSearch }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [userData, setUserData] = React.useState()
+  const [userData, setUserData] = React.useState<{ data: { name: string, email: string } } | null>(null);
 
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
